@@ -9,7 +9,7 @@ cwd = os.getcwd()
 
 def check_file_path(path):
   if not os.path.exists(path):
-    print("Required files or folders are missing")
+    print("Required files or folders to run this program are missing")
     close()
 
 def create_selected_dir(path):
@@ -23,7 +23,7 @@ def read_csv_data(path):
       data = list(csv_reader);
       data.pop(0) # Remove column name
       final_data = list(chain.from_iterable(data))  # convert 2D array to 1D
-      print("{} selected image ids found".format(len(final_data)))
+      print("{} selected image ids found \n".format(len(final_data)))
       return final_data;
   else:
     print("CSV File does not exist in given path")
